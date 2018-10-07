@@ -2,6 +2,13 @@ class Tenant < ApplicationRecord
 
   acts_as_universal_and_determines_tenant
   has_many :members, dependent: :destroy
+  has_many :projects, dependent: :destroy
+  
+  def can_create_projects?
+  # will determine if plan is free and have less than 1 project or if the plan if premium
+    (plan == 'free' && projects.count < 1) || (plan == 'premium')
+  end
+
   validates_uniqueness_of :name
   validates_presence_of :name
 

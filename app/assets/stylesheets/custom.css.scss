@@ -1,3 +1,11 @@
+/** {
+  outline: solid red 1px;
+}*/
+
+html, body {
+  margin: 0 !important;
+}
+
 .user-name {
   padding: 0 !important ;
   padding-left: 5px;
@@ -17,6 +25,7 @@
 
 .navbar {
   background-color: black;
+  z-index: 0;
 }
 
 .navbar-brand {
@@ -130,4 +139,13 @@
 
 .no-right-padding {
   padding-right: 0 !important;
+}
+
+.table tr td {
+  a.main-link {
+    color: #428bca;
+  }
+  a.main-link:hover {
+    background: none;
+  }
 }

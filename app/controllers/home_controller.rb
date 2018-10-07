@@ -11,6 +11,8 @@ class HomeController < ApplicationController
       end
 
       @tenant = Tenant.current_tenant
+      # placeholder method from project model
+      @projects = Project.by_plan_and_tenant(@tenant.id)
       params[:tenant_id] = @tenant.id
     end
   end
