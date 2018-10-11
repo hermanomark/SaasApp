@@ -1,6 +1,6 @@
 class Plan
   # constant variable
-  PLANS = [:free, :premuim]
+  PLANS = [:free, :premium]
 
   def self.options
     # map method basically modify each element in array
